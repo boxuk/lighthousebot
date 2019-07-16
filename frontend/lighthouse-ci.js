@@ -44,7 +44,7 @@ class LighthouseCI {
 
     // POST https://builder-dot-lighthouse-ci.appspot.com/ci
     // '{"output": "json", "url": <testUrl>}"'
-    return fetch('https://builder-dot-lighthouse-ci.appspot.com/ci', {
+    return fetch(process.env.BUILDER_URL, {
       method: 'POST',
       body: JSON.stringify(body),
       headers
